@@ -25,6 +25,16 @@ services:
     networks:
       - forum-net
 
+  thread:
+    build: ./thread
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - forum-net
+
+
 volumes:
   db-data:
 

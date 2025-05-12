@@ -33,6 +33,16 @@ services:
       - api
     networks:
       - forum-net
+  
+  sender:
+    build: ./sender
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    networks:
+      - forum-net
+
 
 
 volumes:

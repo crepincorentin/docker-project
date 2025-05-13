@@ -8,7 +8,9 @@ app.use(express.json());
 
 // Récupération des messages
 app.get('/messages', async (req, res) => {
-  const result = await pool.query('SELECT * FROM messages ORDER BY created_at DESC');
+  const result = await pool.query(
+    'SELECT * FROM messages ORDER BY created_at DESC'
+  );
   res.json(result.rows);
 });
 

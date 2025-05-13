@@ -1,9 +1,9 @@
 jest.mock('pg', () => {
   const mClient = {
-    query: jest.fn()
+    query: jest.fn(),
   };
   return {
-    Pool: jest.fn(() => mClient)
+    Pool: jest.fn(() => mClient),
   };
 });
 
@@ -20,7 +20,12 @@ describe('API /messages', () => {
 
   it('GET /messages should return a list of messages', async () => {
     const mockMessages = [
-      { id: 1, pseudo: 'Test', content: 'Hello', created_at: new Date().toISOString() },
+      {
+        id: 1,
+        pseudo: 'Test',
+        content: 'Hello',
+        created_at: new Date().toISOString(),
+      },
     ];
     pool.query.mockResolvedValueOnce({ rows: mockMessages });
 

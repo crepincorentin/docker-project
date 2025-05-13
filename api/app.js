@@ -24,4 +24,4 @@ app.post('/messages', async (req, res) => {
   res.status(201).json(result.rows[0]);
 });
 
-module.exports = app; // 👉 exporte uniquement l'application, pas le serveur
+module.exports = app; // 👉 exporte uniquement l'application, pas le serveuur

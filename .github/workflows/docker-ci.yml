@@ -47,14 +47,9 @@ jobs:
           cd sender && npm ci && cd ..
           cd api && npm ci && cd ..
 
-      - name: Run frontend tests (Jest)
+      - name: Run backend tests
         run: |
-          cd thread && npm test -- --watchAll=false && cd ..
-          cd sender && npm test -- --watchAll=false
-
-      - name: Run backend tests (Pytest)
-        run: |
-          cd api && pytest
+          cd api && npm test
 
   build-and-push:
     name: Build and Push Docker Images

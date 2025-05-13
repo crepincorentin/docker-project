@@ -39,7 +39,9 @@ function Sender() {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mb-2">
             💬
           </div>
-          <h1 className="text-2xl font-semibold text-gray-800 text-center">Nouveau message</h1>
+          <h1 className="text-2xl font-semibold text-gray-800 text-center">
+            Nouveau message
+          </h1>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">

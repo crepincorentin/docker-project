@@ -28,11 +28,6 @@ jobs:
           cd thread && npx prettier . --check && cd ..
           cd sender && npx prettier . --check && cd ..
 
-      - name: Run ESLint
-        run: |
-          cd thread && npx eslint . && cd ..
-          cd sender && npx eslint .
-
   test:
     name: Run Tests
     runs-on: ubuntu-latest

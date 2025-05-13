@@ -45,7 +45,7 @@ jobs:
         run: |
           cd thread && npm ci && cd ..
           cd sender && npm ci && cd ..
-          cd api && pip install -r requirements.txt
+          cd api && npm ci && cd ..
 
       - name: Run frontend tests (Jest)
         run: |
